@@ -1,30 +1,31 @@
 @echo off
-:: Floor Plan Annotation Setup Script
+:: Floor Plan Annotation Setup Script - For NoirPrimordial7
+
+echo ============================================
+echo     🏗 Floor Planner Annotation Setup
+echo ============================================
 
 :: 1. Clone the GitHub repo
-echo Cloning the dataset repo...
-git clone https://github.com/NoirPrimordial7/dataset-floor-planner.git dataset
+echo 🔄 Cloning GitHub repo...
+git clone https://github.com/NoirPrimordial7/dataset-floor-planner.git dataset-floor-planner
+cd dataset-floor-planner
 
-cd dataset
-
-:: 2. Create a virtual environment (optional but clean)
-echo Creating virtual environment...
+:: 2. Create virtual environment
+echo 🐍 Creating virtual environment...
 python -m venv .venv
 call .venv\Scripts\activate.bat
 
 :: 3. Install LabelMe
-echo Installing LabelMe...
+echo 📦 Installing LabelMe...
 pip install --upgrade pip
 pip install labelme
 
-:: 4. Launch LabelMe with image folder
-echo Launching LabelMe...
+:: 4. Start LabelMe
+echo 🚀 Starting LabelMe with image folder...
 labelme images annotations
 
-:: Reminder
 echo.
-echo --------------------------------------
-echo 💾 REMINDER: Save your JSONs in /annotations/
-echo 🧾 You are annotating %USERNAME%'s batch
-echo --------------------------------------
+echo ✅ Annotation Ready!
+echo 💾 Make sure all JSONs are saved in the 'annotations/' folder.
+echo.
 pause
