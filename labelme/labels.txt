@@ -1,0 +1,13 @@
+_background_
+wall
+door
+window
+bed
+sofa
+table
+chair
+sink
+toilet
+shower
+wardrobe
+label
